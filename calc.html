@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
+<style>
+body
+{
+  background-color:#999999;
+
+}
+.button{
+  background-color:#e6e6e6;
+  text-align:center;
+  font-size:35px;
+  padding:-100px;
+  border-radius: 8px;
+}
+.button:hover{
+  background-color:#3385ff;
+  box-shadow: 1px 10px 10px 1px black;
+  cursor: default;
+}
+</style>
+</head>
+<h3 style="text-align:center;font-family:Boogaloo;font-size:35px">Simple Calculator using CSS and JS</h3>
+<body onload="load_handler();">
+<div style="margin:25px;background-color:#a6a6a6">
+<input type="text" id="text_area" style="padding:1%;margin:10px;margin-left:470px;margin-top:5%;font-size:25px" size="20px" onfocus="this.blur(); "><br>
+<div class="row">
+<div class="col-sm-1" style="margin-left:470px" >
+<div class="button" id="(">(</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id=")">)</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="%">%</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="AC">AC</div>
+</div>
+</div>
+<div class="row" style="margin-top:10px">
+<div class="col-sm-1" style="margin-left:470px">
+<div class="button" id="7">7</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="8">8</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="9">9</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button">/</div>
+</div>
+</div>
+<div class="row" style="margin-top:10px">
+<div class="col-sm-1" style="margin-left:470px">
+<div class="button" id="4">4</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="5">5</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="6">6</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="X">X</div>
+</div>
+</div>
+<div class="row" style="margin-top:10px">
+<div class="col-sm-1" style="margin-left:470px">
+<div class="button" id="1">1</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="2">2</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="3">3</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="-">-</div>
+</div>
+</div>
+<div class="row" style="margin-top:10px">
+<div class="col-sm-1" style="margin-left:470px">
+<div class="button" id="0">0</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id=".">.</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="=">=</div>
+</div>
+<div class="col-sm-1" style="margin-left:-20px">
+<div class="button" id="+">+</div>
+</div>
+</div>
+<br><br><br><br><br>
+</div>
+<script>
+//document.body.addEventListener("load",load_handler,false);
+var str="";
+var text=document.getElementById("text_area");
+function load_handler()
+{
+  text.value="";
+}
+var dom=document.querySelectorAll(".button");
+dom[0].addEventListener("click",handler0,false);
+function handler0()
+{
+ str=str+"("
+ text.value=str;
+}
+dom[1].addEventListener("click",handler1,false);
+function handler1()
+{
+ str=str+")"
+ text.value=str;
+}
+dom[2].addEventListener("click",handler2,false);
+function handler2()
+{
+ str=str+"%"
+ text.value=str;
+}
+dom[3].addEventListener("click",handler3,false);
+function handler3()
+{
+ str=0;
+ text.value=str;
+ str="";
+}
+dom[4].addEventListener("click",handler4,false);
+function handler4()
+{
+ str=str+"7";
+ text.value=str;
+}
+dom[5].addEventListener("click",handler5,false);
+function handler5()
+{
+ str=str+"8";
+ text.value=str;
+}
+dom[6].addEventListener("click",handler6,false);
+function handler6()
+{
+ str=str+"9";
+ text.value=str;
+}
+dom[7].addEventListener("click",handler7,false);
+function handler7()
+{
+ str=str+"/";
+ text.value=str;
+}
+dom[8].addEventListener("click",handler8,false);
+function handler8()
+{
+ str=str+"4";
+ text.value=str;
+}
+dom[9].addEventListener("click",handler9,false);
+function handler9()
+{
+ str=str+"5";
+ text.value=str;
+}
+dom[10].addEventListener("click",handler10,false);
+function handler10()
+{
+ str=str+"6";
+ text.value=str;
+}
+dom[11].addEventListener("click",handler11,false);
+function handler11()
+{
+ str=str+"*";
+ text.value=str;
+}
+dom[12].addEventListener("click",handler12,false);
+function handler12()
+{
+ str=str+"1";
+ text.value=str;
+}
+dom[13].addEventListener("click",handler13,false);
+function handler13()
+{
+ str=str+"2";
+ text.value=str;
+}
+dom[14].addEventListener("click",handler14,false);
+function handler14()
+{
+ str=str+"3";
+ text.value=str;
+}
+dom[15].addEventListener("click",handler15,false);
+function handler15()
+{
+ str=str+"-";
+ text.value=str;
+}
+dom[16].addEventListener("click",handler16,false);
+function handler16()
+{
+ str=str+"0";
+ text.value=str;
+}
+dom[17].addEventListener("click",handler17,false);
+function handler17()
+{
+ str=str+".";
+ text.value=str;
+}
+dom[18].addEventListener("click",handler18,false);
+function handler18()
+{
+var result,text_before;
+text_before=text.value;
+result=eval(str);
+if(typeof(result)!= "undefined")
+ text.value=result;
+else
+ text.value=0;
+}
+dom[19].addEventListener("click",handler19,false);
+function handler19()
+{
+ str=str+"+";
+ text.value=str;
+}
+</script>
+</body>
+</html>
